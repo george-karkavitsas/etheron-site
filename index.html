@@ -225,6 +225,48 @@
       content: '›'; position: absolute; left: 0; color: var(--accent2);
     }
 
+     /* ── QR code ── */
+    .qr-wrap {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  animation: fadeUp 0.7s 0.4s ease both;
+}
+
+.qr-label {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.qr-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  background: rgba(11,18,32,0.75);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(59,130,246,0.12);
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.qr-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(100,180,255,0.28);
+}
+
+.qr-img {
+  width: 132px;
+  height: 132px;
+  display: block;
+  background: white;
+  border-radius: 10px;
+  padding: 0.4rem;
+}
     /* ── DISCLAIMER ── */
     .disclaimer {
       margin: 0 2rem; max-width: 1100px; margin-left: auto; margin-right: auto;
@@ -298,6 +340,19 @@
     Download on Android
   </a>
 </div>
+
+<div class="qr-wrap">
+  <p class="qr-label">Or scan to open Play Store</p>
+  <a
+    href="https://play.google.com/store/apps/details?id=co.uk.gvksoftware.etheron"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="qr-card"
+  >
+    <img src="etheron_qr_code.png" alt="Scan QR code to download Etheron on Android" class="qr-img">
+  </a>
+</div>
+        
       </div>
     </section>
 
